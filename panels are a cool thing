@@ -1,0 +1,28 @@
+#this is the main bit of code that you add to allow for a panel in forms to be replaced with another form. 
+#i'm curently using this for a ui where when you click a button you switch pages. 
+
+
+
+public void loadform(object Form)
+        {
+            if (this.main_panel.Controls.Count > 0)
+                this.main_panel.Controls.RemoveAt(0);
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.main_panel.Controls.Add(f);
+            this.main_panel.Tag = f;
+            f.Show();
+        }
+        
+        
+        
+       #----------------------------------------------------------------- 
+       #     button \/ \/ \/ if you double click the button you wish to use to switcha form it will look like this
+        
+        
+        private void button(object sender, EventArgs e)
+        {
+            loadform(new form());
+        }
+        #           form ^^^^  this is where you put the form you want to use such as home_page 
