@@ -1,0 +1,107 @@
+import math
+
+from turtle import *
+import turtle as tur
+ 
+
+
+
+
+def cur():
+    print("please enter the circumfrence")
+    global circumfrence 
+    while True:
+        circumfrence = input()
+
+        try:
+            value = int(circumfrence)
+        except ValueError:
+           value = "sorry this isnt a number"
+           print(value)
+           print("try again")
+
+        else:              
+            break
+
+    global diamiter
+    
+
+    diamiter  = int(circumfrence) / math.pi
+    print (diamiter)
+
+
+def dia():
+    print ("please enter the diamiter")
+    global diamiter 
+    while True:
+        diamiter = input()
+
+        try:
+            value = int(diamiter)
+        except ValueError:
+           value = "sorry this isnt a number"
+           print(value)
+           print("try again")
+
+        else:
+              
+            break
+   
+
+
+
+
+
+          
+
+
+def rad():
+    print("please enter the radius")
+    global radius 
+    while True:
+        radius = input()
+
+        try:
+            value = int(radius)
+        except ValueError:
+           value = "sorry this isnt a number"
+           print(value)
+           print("try again")
+
+        else:              
+            break
+
+    global diamiter
+    
+
+    diamiter  = int(radius) *2
+    print (diamiter)
+
+
+
+
+
+print("welcome to the circle generator ")
+print("""    """)
+print("please enter C if you have the circumfrence  D if you have the diameter  or R if you have ther radious ")
+ans = input()
+ans = ans.lower()
+
+if ans == "c":
+    cur()
+
+
+elif ans == "d":
+    dia()
+
+elif ans == "r":
+    rad()
+
+
+
+
+tur.circle(int(diamiter))
+
+
+
+
