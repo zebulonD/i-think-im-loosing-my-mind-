@@ -1,0 +1,35 @@
+# i-think-im-loosing-my-mind-
+this is a visual insight into my magical mind 
+
+
+
+
+
+Random rand = new Random();
+        private void Make()
+        {
+            PictureBox newPic = new PictureBox();
+            newPic.Height = 50;
+            newPic.Width = 50;
+            newPic.BackColor = Color.Maroon;
+
+            int x = rand.Next(10, this.ClientSize.Width - newPic.Width);
+            int y = rand.Next(10, this.ClientSize.Height - newPic.Height);
+            newPic.Location = new Point(x, y);
+
+            
+
+            
+            this.Controls.Add(newPic);
+
+
+           
+
+
+        }
+
+        private void TimerEvent(object sender, EventArgs e)
+        {
+            Make();
+           
+        }
