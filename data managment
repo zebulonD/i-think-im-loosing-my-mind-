@@ -1,0 +1,99 @@
+import pandas as pd
+import time
+df = pd.read_csv('data.csv')
+
+
+def home():
+    print("if you wish to exit please enter\"EXIT\"")
+    time.sleep(1)
+    print("if you wish to go to the menu please enter\"MENU\"")
+    time.sleep(1)
+    while True:
+        number = input("PLEASE SELECT AN OPTION: ")
+        print()
+
+        try:
+            value = str(number)
+        except ValueError:
+            value = "sorry this is an invalid option "
+            print(value)
+            print("try again")
+        else:
+            value=value.lower()
+            
+            if value=="menu":
+                print("returing to menu")
+                a=["","",""]
+                for x in a:
+                    time.sleep(.5)
+                    print(x)
+                menu()
+            elif value=="exit": 
+                a=["okay","closing","program","now"]       
+                for x in a:
+                    time.sleep(.5)
+                    print(x)
+                quit()
+            else:
+                print("sorry thats not a valid option please try again")
+
+def menu():
+
+
+    print ("wlecome")
+    a=["\t\tMENU",
+    "1.\tSHOW FULL DATA SET",
+    "2.\t  SEARCH OPTIONS",
+    "3.\t       EXIT"]
+    for x in a:
+        time.sleep(0.5)
+        print(x)   
+   
+    while True:
+        number = input("PLEASE SELECT AN OPTION: ")
+        print()
+
+        try:
+            value = int(number)
+        except ValueError:
+            value = "sorry this is an invalid option "
+            print(value)
+            print("try again")
+        else:
+            if value == 1:
+                data()
+            elif value == 2:
+                search()
+            elif value == 3:
+                quit()
+            
+def data():
+    print("printing data set")
+    print ()
+    print ()
+    print ()
+    time.sleep(.5)
+    print(df.to_string())
+    time.sleep(.5)
+    print ()
+    time.sleep(.5)
+    print ()
+    time.sleep(.5)
+    print ()
+    time.sleep(1)
+    home()
+    
+    
+def search():
+    print("searching") 
+    home()  
+
+
+
+
+
+
+
+
+menu()
+
