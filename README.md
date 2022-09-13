@@ -1,27 +1,34 @@
 # i-think-im-loosing-my-mind-
 this is a visual insight into my magical mind 
 
+
+
+
+
+
+
+
 import math
 import time
 
 
 
-#t=("welcome","to the","grand","Zebbby D","calculator ","","")
-#for f in t:
-#    print(f)
-#    time.sleep(0.5)
+t=("welcome","to the","grand","Zebbby D","calculator ","","")
+for f in t:
+    print(f)
+    time.sleep(0.5)
 
-#alpha=("please type \"+\" if you wish to add",
-#       "please type \"-\" if you wish to take away",
-#       "please type \"*\" if you wish to multiply",
-#       "please type \"/\" if you wish to devide",
-#       "please type \"end\" if you wish to end this program",
-#       "please type \"history\" if you wish to see your previous calculations",
-#       "please type \"previous\" if you wish to use a previous answer in your next calculation \nhowever it is unavailble untill your first caculation",
-#       "please type \"menu\" if you wish to see what options you have","","")
-#for you in alpha:
-#    print(you)
-#    time.sleep(0.5)
+alpha=("please type \"+\" if you wish to add",
+       "please type \"-\" if you wish to take away",
+       "please type \"*\" if you wish to multiply",
+       "please type \"/\" if you wish to devide",
+       "please type \"end\" if you wish to end this program",
+       "please type \"history\" if you wish to see your previous calculations",
+       "please type \"previous\" if you wish to use a previous answer in your next calculation \nhowever it is unavailble untill your first caculation",
+       "please type \"menu\" if you wish to see what options you have","","")
+for you in alpha:
+    print(you)
+    time.sleep(0.5)
 
 
 
